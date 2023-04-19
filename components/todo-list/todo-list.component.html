@@ -1,1 +1,15 @@
-<p>todo-list works!</p>
+<main class="todo">
+    <div class="section-main">
+        <!-- <app-header></app-header> -->
+        <header class="header">
+            <h1>todos</h1>
+            <i class="fa-solid fa-chevron-down toggleButton" (click)="toggleAll()"></i>
+            <input type="text" class="new-todo" placeholder="What needs to be done?" [(ngModel)]="newTodo"
+                (keyup.enter)="addTodo()">
+        </header>
+            <ul class="todo-list" *ngIf="listVisible">
+              <app-todo-item></app-todo-item>
+            </ul>
+      <app-footer></app-footer>
+    </div>
+</main>

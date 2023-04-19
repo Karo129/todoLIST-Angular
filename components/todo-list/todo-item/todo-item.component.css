@@ -1,0 +1,49 @@
+li {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+checkbox {
+	font-size: 2em;
+}
+
+ li > i {
+	display: none;
+	margin-left: auto;
+}
+
+li:hover i {
+	display: block;
+	color: #af5b5e;
+}
+
+ input {
+	margin-right: 0.5em;
+}
+
+.done {
+	color: #d9d9d9;
+	text-decoration: line-through;
+}
+
+ li {
+	padding: 0.3em;
+	line-height: 1.2;
+	border-bottom: 1px solid #ededed;
+}
+
+ li > input {
+	font-size: 2em;
+}
+
+
+li > i {
+	display: none;
+	margin-left: auto;
+}
+
+li:hover i {
+	display: block;
+	color: #af5b5e;
+}

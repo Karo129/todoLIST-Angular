@@ -1,1 +1,6 @@
-<p>todo-item works!</p>
+<li *ngFor="let todo of todos; let i=index" (dblclick)="editTodo(i)">
+    <input type="checkbox" [(ngModel)]="todo.done">
+    <span [hidden]="todo.editing"  [class.done]="todo.done">{{todo.title}}</span>
+    <input type="text" [(ngModel)]="todo.title" [hidden]="!todo.editing" (blur)="updateTodo(i)" (keyup.enter)="updateTodo(i)">
+    <i (click)="deleteTodo(i)">X</i>
+</li>
