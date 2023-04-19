@@ -37,6 +37,11 @@ li:hover i {
 	font-size: 2em;
 }
 
+li .editing {
+    font-size: 1.2em;
+    outline: 1px solid #ededed;
+    color: inherit;
+}
 
 li > i {
 	display: none;
@@ -46,4 +51,5 @@ li > i {
 li:hover i {
 	display: block;
 	color: #af5b5e;
+    transition: color .4s;
 }
