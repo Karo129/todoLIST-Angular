@@ -1,1 +1,9 @@
-<p>footer works!</p>
+<footer class="footer">
+    <span class="counter">{{counting()}}{{counting() == 1 ? ' item' : ' items'}} left</span>
+    <div class="options">
+        <a class="selected">All</a>
+        <a>Active</a>
+        <a >Completed</a>
+    </div>
+    <button class="clear-completed">Clear completed</button>
+</footer>
