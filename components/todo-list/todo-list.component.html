@@ -10,6 +10,6 @@
             <ul class="todo-list" *ngIf="listVisible">
               <app-todo-item></app-todo-item>
             </ul>
-      <app-footer></app-footer>
+      <app-footer *ngIf="footerVisible"></app-footer>
     </div>
 </main>

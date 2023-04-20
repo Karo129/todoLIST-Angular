@@ -15,6 +15,7 @@ export class TodoItemComponent implements OnInit {
   ngOnInit(): void {
     this.todos = this.todolistservice.getTasks();
   }
+
   editTodo(index: number) {
     this.todolistservice.editTodo(index);
   }
@@ -26,5 +27,5 @@ export class TodoItemComponent implements OnInit {
   deleteTodo(index: number) {
     this.todolistservice.removeTodo(index);
   }
-
+  
 }

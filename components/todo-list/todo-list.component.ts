@@ -10,7 +10,9 @@ import { TodoListService } from 'src/app/services/todo-list.service'
 export class TodoListComponent implements OnInit {
 	newTodo: string = ''
 	todos: newTodo[] = []
-	listVisible: boolean = false
+	listVisible: boolean = false;
+	footerVisible: boolean = false;
+	
 
 	constructor(private todolistservice: TodoListService) {}
 
@@ -26,7 +28,8 @@ export class TodoListComponent implements OnInit {
 		}
 		this.todolistservice.addTask(todo)
 		this.newTodo = ''
-		this.listVisible = true
+		this.listVisible = true;
+		this.footerVisible = true;
 	}
 
 	toggleTodo(todo: any) {
@@ -36,8 +39,5 @@ export class TodoListComponent implements OnInit {
 	toggleAll() {
 		this.todolistservice.toggleAll()
 	}
-
-	clearCompleted() {
-		this.todos = this.todos.filter(todo => !todo.done)
-	}
+  
 }
