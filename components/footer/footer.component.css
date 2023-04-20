@@ -1,0 +1,38 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	color: #777;
+	align-items: baseline;
+}
+
+.counter,
+.options a,
+.clear-completed {
+	font-size: 1em;
+	color: #777;
+}
+
+.counter {
+	padding: 1.1em;
+}
+
+.options a {
+	text-decoration: none;
+	padding: 0.5em;
+	cursor: pointer;
+}
+
+.options a:hover {
+	border: 1px solid transparent;
+	border-color: rgba(175, 47, 47, 0.2);
+}
+
+.clear-completed {
+	border: none;
+	background-color: inherit;
+	padding: 0.9em;
+}
+
+.clear-completed:hover {
+	text-decoration: underline;
+}
