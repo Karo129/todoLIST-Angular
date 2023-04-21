@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { newTodo } from 'src/app/newTodo.interface';
 import { TodoListService } from 'src/app/services/todo-list.service';
 
@@ -9,11 +10,17 @@ import { TodoListService } from 'src/app/services/todo-list.service';
 })
 export class FooterComponent {
   todos: newTodo[] = [];
+ currentStatus = '';
 
-  constructor(private todolistservice: TodoListService) {}
+  constructor(private todolistservice: TodoListService, private aroute: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.todos = this.todolistservice.getTasks();
+    this.aroute.params
+    .subscribe((status: any) => {
+      this.currentStatus = status || '';
+    })
   }
  
   counting() {

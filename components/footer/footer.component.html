@@ -1,9 +1,12 @@
 <footer class="footer">
     <span class="counter">{{counting()}}{{counting() == 1 ? ' item' : ' items'}} left</span>
     <div class="options">
-        <a class="selected">All</a>
-        <a>Active</a>
-        <a >Completed</a>
+        <a [routerLink]="['']" 
+        [class.selected] ="currentStatus == ''">All</a>
+        <a [routerLink]="['', 'active']" 
+        [class.selected] ="currentStatus == 'active'">Active</a>
+        <a [routerLink] = "['', 'done']" 
+        [class.selected]= "currentStatus == 'done'">Completed</a>
     </div>
     <button class="clear-completed">Clear completed</button>
 </footer>
